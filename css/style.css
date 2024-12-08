@@ -26,6 +26,7 @@ a {
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    top: 50%;
 }
 
 .buttons {
