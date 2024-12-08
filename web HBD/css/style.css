@@ -17,7 +17,7 @@ a {
     padding: 0;
     background-size: cover;
     background-position-y: center;
-    width: 320px;  /* giảm width và height bằng nhau để tạo hình tròn hoàn hảo */
+    width: 500px;  /* giảm width và height bằng nhau để tạo hình tròn hoàn hảo */
     height: 1000px;
 }
 .buttons {
@@ -148,8 +148,8 @@ a {
     height: 500px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* shadow đậm hơn */
     position: absolute;
-    left: 55%;
-    top: 70%;
+    left: 60%;
+    top: 40%;
     transform: translate(-50%, -50%);
     border-radius: 50%; /* 50% để tạo hình tròn hoàn hảo */
     border: 8px solid rgb(255, 17, 0); /* tăng độ dày viền */
