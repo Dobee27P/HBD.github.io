@@ -9,7 +9,8 @@ a {
     text-decoration: none;
 }
 
-.page__main {
+@media (max-width: 768px){
+    .page__main {
     /* Ảnh nền của trang đầu tiên nếu bạn muốn đổi thì đổi tại đây */
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
@@ -157,3 +158,4 @@ a {
     overflow: hidden; /* ẩn các phần thừa của ảnh */
 }
 
+}
