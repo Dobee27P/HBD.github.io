@@ -148,8 +148,8 @@ a {
     height: 500px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* shadow đậm hơn */
     position: absolute;
-    left: 70%;
-    top: 50%;
+    left: 55%;
+    top: 70%;
     transform: translate(-50%, -50%);
     border-radius: 50%; /* 50% để tạo hình tròn hoàn hảo */
     border: 8px solid rgb(255, 17, 0); /* tăng độ dày viền */
