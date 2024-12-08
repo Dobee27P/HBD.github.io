@@ -176,3 +176,26 @@ a {
 .page__main {
     height: var(--vh);
 }
+/* Tăng kích thước chữ h5 và thêm hiệu ứng màu sắc */
+h5 {
+    font-size: 5rem; /* Tăng kích thước chữ */
+    text-align: center; /* Căn giữa chữ */
+    font-weight: bold; /* Làm chữ đậm */
+    background: linear-gradient(45deg, #ff5722, #ff9800, #00bcd4, #8bc34a, #9c27b0); /* Gradient màu sắc */
+    color: transparent; /* Chữ trong suốt để nền hiển thị */
+    -webkit-background-clip: text; /* Cắt nền theo chữ cho trình duyệt Webkit (Chrome, Safari) */
+    background-clip: text; /* Cắt nền theo chữ cho các trình duyệt khác */
+    animation: moveUp 1s ease-out forwards; /* Thêm hiệu ứng chuyển động lên */
+}
+
+/* Hiệu ứng di chuyển lên */
+@keyframes moveUp {
+    0% {
+        transform: translateY(50px); /* Đưa chữ xuống dưới */
+        opacity: 0; /* Làm chữ trong suốt khi bắt đầu */
+    }
+    100% {
+        transform: translateY(0); /* Di chuyển chữ lên vị trí ban đầu */
+        opacity: 1; /* Chữ trở lại bình thường */
+    }
+}
