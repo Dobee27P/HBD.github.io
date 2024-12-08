@@ -9,19 +9,22 @@ a {
     text-decoration: none;
 }
 
-.page__main {
+@media (max-width: 768px){
+    .page__main {
     /* Ảnh nền của trang đầu tiên nếu bạn muốn đổi thì đổi tại đây */
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-position-y: -1rem;
+    background-position-y: 1rem;
+    width: 320px;  /* giảm width và height bằng nhau để tạo hình tròn hoàn hảo */
+    height: 1000px;
 }
 .buttons {
     display: flex;
-    column-gap: 3rem;
-    padding: 2rem;
+    column-gap: 2rem;
+    padding: 1.5rem;
 }
 
 .btn-bir:hover {
@@ -143,11 +146,11 @@ a {
 
 .cover {
     width: 300px;  /* giảm width và height bằng nhau để tạo hình tròn hoàn hảo */
-    height: 300px;
+    height: 500px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* shadow đậm hơn */
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%; /* 50% để tạo hình tròn hoàn hảo */
     border: 8px solid rgb(255, 17, 0); /* tăng độ dày viền */
@@ -155,21 +158,4 @@ a {
     overflow: hidden; /* ẩn các phần thừa của ảnh */
 }
 
-
-#playText {
-    font-size: 16px;
-    color: #333;
-    margin-top: 20px;
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Hiệu ứng fade-in khi hiển thị text */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
