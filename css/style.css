@@ -178,7 +178,7 @@ a {
 }
 /* Tăng kích thước chữ h5 và thêm hiệu ứng màu sắc */
 h5 {
-    font-size: 5rem; /* Tăng kích thước chữ */
+    font-size: 7rem; /* Tăng kích thước chữ */
     text-align: center; /* Căn giữa chữ */
     font-weight: bold; /* Làm chữ đậm */
     background: linear-gradient(45deg, #ff5722, #ff9800, #00bcd4, #8bc34a, #9c27b0); /* Gradient màu sắc */
@@ -186,6 +186,7 @@ h5 {
     -webkit-background-clip: text; /* Cắt nền theo chữ cho trình duyệt Webkit (Chrome, Safari) */
     background-clip: text; /* Cắt nền theo chữ cho các trình duyệt khác */
     animation: moveUp 1s ease-out forwards; /* Thêm hiệu ứng chuyển động lên */
+    top: 20%;
 }
 
 /* Hiệu ứng di chuyển lên */
