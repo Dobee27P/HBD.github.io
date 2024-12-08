@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" type="image/png" href="./img/CILKGax.png">
+        <!-- Tiêu đề của trang dòng thời gian -->
+		<title>Timeline</title>	    
+        <link type="text/css" rel="stylesheet" href="./css/default.css">
+        <link rel="stylesheet" href="./css/style.css">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/jscex.min.js"></script>
+		<script type="text/javascript" src="./js/jscex-parser.js"></script>
+		<script type="text/javascript" src="./js/jscex-jit.js"></script>
+		<script type="text/javascript" src="./js/jscex-builderbase.min.js"></script>
+		<script type="text/javascript" src="./js/jscex-async.min.js"></script>
+		<script type="text/javascript" src="./js/jscex-async-powerpack.min.js"></script>
+		<script type="text/javascript" src="./js/functions.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./js/love.js" charset="utf-8"></script>
+	    <style type="text/css"></style>
+
+</head>
+    <body>
+        <div class="buttons">
+            <a href="index.html" class="btn btn-bir">Birthday</a>
+            <a href="timeline.html" class="btn btn-timeline">Timeline</a>
+            <a href="gallery.html" class="btn btn-gallery">Gallery</a>
+        </div>
+        <div id="main">
+             <div id="wrap">
+                <div id="text">
+			        <div id="code">
+					<!-- 4. CHỈNH SỬA LỜI CHÚC CỦA BẠN TẠI ĐÂY-->
+			      <font color="#3500ff"><span class="say">ສຸກສັນວັນເກີດເດີແໝບ❤️</span><br>
+						<span class="say">ເຈົ້າຍັງຈື່ໄດ້ບໍ່ວ່າເຮົາຮັກກັນຕັ້ງແຕ່ຕອນໃດ ?</span><br>
+						<span class="say">ຂ້ອຍຈື່ໄດ້ສະເໝີ.</span><br>
+						<span class="say"> </span><br>
+						<span class="say">ຄົນເຮົາໄດ້ເວົ້າວ່າພະຍາດໃດກໍ່ມີຢາປິ່ນປົວ</span><br>
+						<span class="say">ຂ້ອຍບໍ່ເຊື່ອຄຳເວົ້ານັ້ນໃນຕອນທີ່ຂ້ອຍໄດ້ພົບກັບເຈົ້າ</span><br>
+						<span class="say">ຂ້ອຍໄດ້ຄົນພົບ ວ່າເປັນພະຍາດບາງທີກໍ່,</span><br>
+						<span class="say">ອາດຈະບໍ່ມີວິທີການປິ່ນປົວ</span><br>
+						<span class="say">ມັນເປັນພະຍາດທີ່ມີຄວາມສຸກທີ່ສຸດທີ່ຂ້ອຍໂຊກດີພໍທີ່ຈະມີ</span><br>
+						<span class="say">ນັ້ນແມ່ນພະຍາດຂ້ອຍຮັກເຈົ້າຫລາຍ❤️</span><br>
+						<span class="say">ຮັກເຈົ້າຕະຫຼອດໄປ😊</span><br>
+						<span class="say">ເຊື່ອໝັ້ນໃນໂຕຂ້ອຍ</span><br>
+						<span class="say">ສຸກສັນວັນເກີດ👏ຂໍໃຫ້ມີຄວາມສຸກຫລາຍ💰ປາດຖະໜາສິ່ງໃດຂໍໃຫ້ໄດ້ສຶ່ງນັ້ນ🤑💰💸</span><br>
+						<span class="say"> </span><br>
+                        <span class="say"><span class="space"></span> -- ຂ້ອຍ ຮັກ ເຈົ້າ💕 --</span>
+			  </font></p>
+      </div>
+                </div>
+                <div id="clock-box">
+					<span class="STYLE1"> 22 year old</span>  <!--Có thể thay đổi chổ này thành số tuổi của người bạn muốn chúc -->
+                  <div id="clock"></div>
+              </div>
+                <canvas id="canvas" width="1100" height="680"></canvas>
+            </div>
+            
+        </div>
+
+    <!-- Phần nhạc -->
+    <audio id="player" autoplay loop>
+        <source src="./music/music.mp3" type="audio/mp3" />
+    </audio>
+    <script>
+    (function(){
+        var canvas = $('#canvas');
+		
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;        }
+
+        var width = canvas.width();
+        var height = canvas.height();        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e){
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+    	        tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+    	        tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+		    var together = new Date();
+		    var year = 2020, month = 7, day = 20;  // 5. thay đổi ngày tháng năm yêu nhau tại đây hoặc ngày sinh của người mà bạn muốn chúc
+		    together.setFullYear(year, month - 1, day); 			
+		    together.setHours(0);							
+		    together.setMinutes(0);				
+		    together.setSeconds(0);					
+		    together.setMilliseconds(0);			
+
+		    $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+
+            textAnimate().start();
+
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
+    })();
+    window.addEventListener('load', () => {
+                const player = document.getElementById('player');
+                player.play().catch(error => {
+                    alert('Vui lòng nhấp vào màn hình để phát nhạc!');
+                });
+            });
+
+            document.addEventListener('click', () => {
+                const player = document.getElementById('player');
+                player.play().catch(error => {
+                    console.log('Không thể phát nhạc:', error);
+                });
+    }, { once: true });
+    </script>
+</div>
+</body>
+</html>
