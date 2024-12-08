@@ -9,15 +9,14 @@ a {
     text-decoration: none;
 }
 
-@media (max-width: 768px){
-    .page__main {
+.page__main {
     /* Ảnh nền của trang đầu tiên nếu bạn muốn đổi thì đổi tại đây */
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-position-y: 1rem;
+    background-position-y: center;
     width: 320px;  /* giảm width và height bằng nhau để tạo hình tròn hoàn hảo */
     height: 1000px;
 }
@@ -149,7 +148,7 @@ a {
     height: 500px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* shadow đậm hơn */
     position: absolute;
-    left: 50%;
+    left: 70%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%; /* 50% để tạo hình tròn hoàn hảo */
@@ -158,4 +157,3 @@ a {
     overflow: hidden; /* ẩn các phần thừa của ảnh */
 }
 
-}
